@@ -1,0 +1,55 @@
+.SelectTrigger {
+  font-family: "Inter Variable", sans-serif;
+  font-size: 14px;
+  min-width: 160px;
+  padding: 4px 8px;
+  border: 1px solid var(--primary-color-foreground);
+  border-radius: 5px;
+  color: var(--primary-color-foreground);
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &[data-state="open"] {
+    .SelectIcon {
+      transform: rotate(180deg);
+    }
+  }
+
+  .SelectIcon {
+    display: flex;
+    align-items: center;
+    transition: transform 0.15s ease-in;
+  }
+}
+
+.SelectContent {
+  font-family: "Inter Variable", sans-serif;
+  font-size: 16px;
+  color: var(--primary-color-foreground);
+  width: var(--radix-select-trigger-width);
+  overflow: hidden;
+  border: 1px solid var(--primary-color-foreground);
+  border-radius: 5px;
+}
+
+.SelectItem {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white-color);
+  padding: 7px 9px 7px 8px;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--primary-color-background);
+  }
+
+  &[data-highlighted] {
+    outline: none;
+  }
+}

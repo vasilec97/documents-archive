@@ -1,0 +1,97 @@
+.Button {
+  cursor: pointer;
+  color: var(--primary-color-foreground);
+  padding: 4px 12px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  transition: all 0.2s linear;
+
+  &[disabled="true"],
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    color: var(--primary-color-background);
+
+    .addonLeft svg,
+    .addonRight svg {
+    }
+  }
+}
+
+.addonLeft,
+.addonRight {
+  display: flex;
+}
+
+.outline {
+  background: none;
+  border-radius: 5px;
+
+  &.primary {
+    color: var(--primary-color-foreground);
+    border: 1px solid var(--primary-color-foreground);
+
+    &:hover {
+      color: var(--primary-color-background);
+      border: 1px solid var(--primary-color-background);
+    }
+  }
+
+  &.secondary {
+    color: var(--secondary-color-foreground);
+    border: 1px solid var(--secondary-color-foreground);
+
+    &:hover {
+      color: var(--secondary-color-background);
+      border: 1px solid var(--secondary-color-background);
+    }
+  }
+
+  &.success {
+    color: var(--success-color-foreground);
+    border: 1px solid var(--success-color-foreground);
+
+    &:hover {
+      color: var(--success-color-background);
+      border: 1px solid var(--success-color-background);
+    }
+  }
+
+  &.danger {
+    color: var(--danger-color-foreground);
+    border: 1px solid var(--danger-color-foreground);
+
+    &:hover {
+      color: var(--danger-color-background);
+      border: 1px solid var(--danger-color-background);
+    }
+  }
+}
+
+.m {
+  font-size: 16px;
+  padding: 4px 12px;
+}
+
+.l {
+  font-size: 18px;
+  padding: 6px 16px;
+}
+
+.xl {
+  font-size: 20px;
+  padding: 8px 20px;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.fullWidth {
+  width: 100%;
+}

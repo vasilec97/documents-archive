@@ -1,0 +1,19 @@
+$hover-color: #ebf0fa;
+
+.RecordItem {
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  .iconCell {
+    padding-left: 26px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

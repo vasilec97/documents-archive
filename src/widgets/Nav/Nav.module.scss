@@ -1,0 +1,36 @@
+.navWrapper {
+  width: 100%;
+  border-bottom: 1px solid var(--calm-color);
+
+  .nav {
+    height: var(--navbar-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-color);
+    gap: 8px;
+    padding: 0;
+
+    .linkItem {
+      font-size: 18px;
+
+      a {
+        font-size: inherit;
+        padding: 8px 20px;
+        border-radius: var(--rounded);
+        color: var(--primary-color-foreground);
+        transition: background-color 0.1s linear;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--calm-color);
+        }
+
+        &.active {
+          color: var(--white-color);
+          background-color: var(--primary-color-foreground);
+        }
+      }
+    }
+  }
+}

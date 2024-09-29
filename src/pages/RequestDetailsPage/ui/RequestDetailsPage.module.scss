@@ -1,0 +1,52 @@
+.RequestDetailsPage {
+  .date {
+    font-weight: 700;
+  }
+
+  .statusBtn {
+    cursor: auto;
+
+    &:hover {
+      border-color: var(--success-color-foreground);
+      color: var(--success-color-foreground);
+    }
+  }
+
+  .recordsLink {
+    &:not(.disabled) {
+      cursor: pointer;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      transition: opacity 0.2s ease;
+    }
+
+    &:hover:not(&.disabled) {
+      svg {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .editButton {
+    font-weight: 500;
+  }
+
+  .filesTitle {
+    flex-shrink: 0;
+    font-weight: 700;
+  }
+
+  .line {
+    height: 1px;
+    width: 100%;
+    background-color: var(--primary-color-background);
+  }
+
+  .descriptionTitle {
+    font-weight: 700;
+    color: var(--gray-color);
+  }
+}

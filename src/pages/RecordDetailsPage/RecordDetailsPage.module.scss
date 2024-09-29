@@ -1,0 +1,41 @@
+.RecordDetailsPage {
+  .date {
+    font-weight: 700;
+  }
+
+  .organiztion {
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  .status {
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    &.in_process {
+      color: var(--primary-color-foreground);
+    }
+
+    &.finished {
+      color: var(--secondary-color-foreground);
+    }
+
+    &.rejected {
+      color: var(--danger-color-foreground);
+    }
+  }
+
+  .infoBlock {
+    max-width: 632px;
+
+    .field {
+      width: 300px;
+
+      .label {
+        font-weight: 700;
+      }
+    }
+  }
+}

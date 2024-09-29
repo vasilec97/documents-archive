@@ -1,0 +1,80 @@
+.RequestFilterFeature {
+  width: 100%;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .titleField {
+    cursor: pointer;
+    color: var(--secondary-color-foreground);
+    transition: color 0.15s ease;
+
+    .title {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .icon {
+      transition: transform 0.15s ease;
+      cursor: pointer;
+    }
+
+    &:hover {
+      color: var(--secondary-color-background);
+    }
+  }
+
+  &.active {
+    .icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  .datepicker {
+    position: relative;
+
+    .calendarIcon {
+      position: absolute;
+      right: 8px;
+      top: 4px;
+    }
+  }
+
+  .separator {
+    width: 12px;
+    height: 1px;
+    background-color: var(--primary-color-foreground);
+  }
+
+  .quickNavigationBtn,
+  .statusBtn {
+    transition: background-color 0.15s linear;
+
+    &.filled {
+      &:hover {
+        color: var(--white-color);
+      }
+    }
+  }
+
+  .quickNavigationBtn {
+    &.filled {
+      background-color: var(--secondary-color-foreground);
+      color: var(--white-color);
+    }
+  }
+
+  .statusBtn {
+    &.filled {
+      background-color: var(--primary-color-foreground);
+      color: var(--white-color);
+
+      &.in_process {
+        svg {
+          stroke: var(--white-color);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.RequestForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+
+  .label {
+    font-weight: 700;
+
+    .formats {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--gray-color);
+    }
+  }
+
+  .error {
+    font-size: 14px;
+    color: var(--danger-color-foreground);
+  }
+}

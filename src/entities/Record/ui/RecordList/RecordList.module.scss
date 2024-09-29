@@ -1,0 +1,55 @@
+.RecordList {
+  .empty {
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--gray-color);
+    border-radius: 5px;
+
+    thead {
+      background-color: var(--calm-color);
+
+      .dateCell {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 4px;
+        border-top-left-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          color: var(--primary-color-background);
+        }
+      }
+
+      th {
+        font-weight: 700;
+      }
+
+      th:last-child {
+        border-top-right-radius: 5px;
+      }
+    }
+
+    th,
+    td {
+      padding: 8px 16px;
+    }
+
+    thead tr,
+    tbody tr:not(:last-child) {
+      border-bottom: 1px solid var(--gray-color);
+    }
+
+    .loaderCell {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

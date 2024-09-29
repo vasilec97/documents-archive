@@ -1,0 +1,88 @@
+.Pagination {
+  font-size: 14px;
+  color: var(--primary-color-foreground);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  .paginationContent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+
+    .paginationItem {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border-radius: 2px;
+      cursor: pointer;
+
+      &:hover:not(&.active, &.placeholder, &.disabled) {
+        background-color: var(--calm-color);
+        transition: background-color 0.2s linear;
+      }
+
+      &.active {
+        background-color: var(--calm-color);
+        color: var(--dark-color-900);
+      }
+
+      &.placeholder {
+        align-items: flex-end;
+        cursor: auto;
+      }
+
+      &.disabled {
+        cursor: auto;
+
+        svg path {
+          pointer-events: none;
+        }
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--accent-color-700);
+      }
+
+      .backBtn,
+      .nextBtn {
+        cursor: pointer;
+
+        &:disabled {
+          pointer-events: none;
+          cursor: auto;
+        }
+      }
+    }
+  }
+
+  .selectContainer {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    .selectTrigger {
+      min-width: 50px;
+      width: 50px;
+      gap: 2px;
+      padding: 2px 6px;
+      border-radius: 2px;
+      background-color: var(--white-color);
+    }
+
+    .selectContent {
+      background-color: var(--white-color);
+    }
+  }
+}
+
+.selectItem {
+  font-size: 14px;
+  gap: 2px;
+  padding: 2px 6px;
+  background-color: var(--white-color);
+}
